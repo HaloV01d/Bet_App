@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 
 @dataclass
-class card:
+class cards:
     suit: str
     rank: str
     value: int
 
+
+@dataclass
 class deck:
     def _init_(self):
         self.card = []
@@ -26,6 +28,7 @@ class deck:
             ("Queen", 10),
             ("King", 10)
         ]
+        #Initialize object inside the class
         for suit in suits:
-            for rank, value in ranks:
-                self.cards.append(Card(suit, rank, value))
+            for rank, value in rank:
+                self.cards.append(cards(suit, rank, value))
