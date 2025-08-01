@@ -1,24 +1,35 @@
+# from Game.cards import deck
 
-def hit ():
-    
-    return
+class Player:
+    def _init_(self, name):
+        self.name = name
+        self.hand = []
 
-def stand():
+    def add_card(self, card):
+        self.hand.append(card)
 
-    return
+    def show_hand(self):
+        return [f"{card.rank} of {card.suit}" for card in self.hand]
 
-def double_down():
+    def hit (self, deck):
+        self.add.card(deck.deal_one())
 
-    return
+    def stand(self):
+        self.is_active = False
 
-def split():
+    def double_down(self, deck):
+        self.bet *= 2
+        self.hit(deck)
+        self.is_active = False
 
-    return
+    def split(self):
 
-def surrender():
+        pass
 
-    return
+    def surrender(self):
+        self.is_active = False
+        self.bet /= 2 
 
-def insurance():
+    def insurance(self):
 
-    return
+        pass

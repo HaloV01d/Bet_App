@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import random
 
 @dataclass
 class cards:
@@ -8,7 +9,7 @@ class cards:
 
 
 @dataclass
-class deck:
+class Deck:
     def _init_(self):
         self.card = []
 
@@ -32,3 +33,11 @@ class deck:
         for suit in suits:
             for rank, value in rank:
                 self.cards.append(cards(suit, rank, value))
+
+    #Shuffle the deck
+    def shuffle(self):
+        random.shuffle(self.cards)
+
+    #Gives you the top card (like drawing a card)
+    def deal_one(self):
+        return self.cards.pop()
