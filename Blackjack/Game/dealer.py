@@ -1,17 +1,18 @@
 import random
 from Game.cards import Deck
-from Game.cards import cards
+from Game.cards import Card
 
 class Dealer:
-    def _init_(self):
+    def __init__(self):
         self.hand = []
         self.is_active = True
 
     def add_card(self, card):
         self.hand.append(card)
 
-    def show_one_card(self, card):
+    def show_one_card(self):
         return f"{self.hand[0].rank} of {self.hand[0].suit}"
+    
     
     def hand_value(self):
         value = sum(card.value for card in self.hand)
