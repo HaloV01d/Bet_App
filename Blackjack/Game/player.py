@@ -1,7 +1,7 @@
 # from Game.cards import deck
 
 class Player:
-    def _init_(self, name):
+    def __init__(self, name):
         self.name = name
         self.hand = []
 
@@ -12,7 +12,7 @@ class Player:
         return [f"{card.rank} of {card.suit}" for card in self.hand]
 
     def hit (self, deck):
-        self.add.card(deck.deal_one())
+        self.add_card(deck.deal_one())
 
     def stand(self):
         self.is_active = False
