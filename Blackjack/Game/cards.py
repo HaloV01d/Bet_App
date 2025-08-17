@@ -1,19 +1,20 @@
 from dataclasses import dataclass
+import random
 
 @dataclass
-class cards:
+class Card:
     suit: str
     rank: str
     value: int
 
 
 @dataclass
-class deck:
-    def _init_(self):
-        self.card = []
+class Deck:
+    def __init__(self):
+        self.cards = []
 
         suits = ["hearts", "diamonds", "clubs", "spades"]
-        rank = [
+        ranks = [
             ("Ace", 11),
             ("2", 2),
             ("3", 3),
@@ -30,5 +31,13 @@ class deck:
         ]
         #Initialize object inside the class
         for suit in suits:
-            for rank, value in rank:
-                self.cards.append(cards(suit, rank, value))
+            for rank, value in ranks:
+                self.cards.append(Card(suit, rank, value))
+
+    #Shuffle the deck
+    def shuffle(self):
+        random.shuffle(self.cards)
+
+    #Gives you the top card (like drawing a card)
+    def deal_one(self):
+        return self.cards.pop()
