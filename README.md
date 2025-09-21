@@ -1,4 +1,5 @@
 🎲 Bet_App
+
 🧪 Personal Python Project – Gambling Game Simulator
 Bet_App is a Python-powered playground for simulating popular gambling games. Built as a personal exploration into game logic, randomness, and user interaction, this project blends algorithmic precision with playful experimentation.
 
