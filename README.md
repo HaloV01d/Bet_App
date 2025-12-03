@@ -1,53 +1,129 @@
-🎲 Bet_App
+# 🎲 Bet_App
 
-🧪 Personal Python Project – Gambling Game Simulator
-Bet_App is a Python-powered playground for simulating popular gambling games. Built as a personal exploration into game logic, randomness, and user interaction, this project blends algorithmic precision with playful experimentation.
+A Python-based collection of classic games featuring Blackjack, Rock-Paper-Scissors, and Mastermind. Built as a personal project to explore game logic, object-oriented programming, and interactive CLI applications.
 
-🧠 What It Does
-This app simulates a variety of betting games, each with its own rules, odds, and outcomes. It’s designed to:
+## 🎮 Games Included
 
-Model realistic gambling mechanics
+### 🃏 Blackjack
+A fully-featured casino card game implementation with:
+- Object-oriented design with separate `Player`, `Dealer`, `Deck`, `Hand`, and `Card` classes
+- Modular architecture for easy maintenance and expansion
+- Betting system integration
+- Proper game flow and dealer AI
 
-Explore probability and fairness
+**Location:** `Blackjack/`
 
-Provide a modular base for adding new games
+### ✊✋✌️ Rock-Paper-Scissors
+Classic hand game with:
+- Player vs. Computer gameplay
+- Win/loss tracking across multiple rounds
+- Interactive command-line interface
+- Game statistics display
 
-Serve as a testbed for visual verification and statistical analysis
+**Location:** `Rock_Paper_Scissors/`
 
-🎮 Games Implemented
-🎰 Slot Machine
+### 🧠 Mastermind
+Code-breaking logic puzzle game featuring:
+- 4-color code guessing with 10 attempts
+- Color-coded terminal output using `colorama`
+- Position feedback system (correct position vs. correct color)
+- Support for 6 different colors (R, G, B, Y, W, M)
 
-🎲 Dice Roll
+**Location:** `Mastermind/`
 
-🃏 Card Draw / Blackjack
+## 💻 Tech Stack
 
-🐎 Horse Race (simulated odds)
+- **Language:** Python 3.x
+- **Libraries:** 
+  - `random` - Game randomization
+  - `colorama` - Enhanced terminal colors (Mastermind)
+- **Design Patterns:** Object-oriented programming, modular architecture
 
-🔢 Number Guessing / Lottery-style picks
+## 📁 Project Structure
 
-(Feel free to update this list with your actual games!)
+```
+Bet_App/
+├── Blackjack/
+│   ├── main.py              # Game entry point
+│   ├── requirements.txt     # Python dependencies
+│   └── Game/                # Game logic modules
+│       ├── blackjack.py
+│       ├── cards.py
+│       ├── dealer.py
+│       ├── deck.py
+│       ├── hand.py
+│       └── player.py
+├── Mastermind/
+│   └── Game.py              # Complete Mastermind implementation
+└── Rock_Paper_Scissors/
+    └── rock_paper_scissors.py
+```
 
-💻 Tech Stack
-Language: Python 3.x
+## 🚀 Getting Started
 
-Libraries: random, time, sys, and custom modules
+### Prerequisites
+- Python 3.x installed on your system
 
-Design: Modular functions for each game, reusable betting logic, and clean CLI output
+### Installation
 
-📈 Features
-Virtual wallet system for placing bets
+1. Clone the repository:
+```bash
+git clone https://github.com/HaloV01d/Bet_App.git
+cd Bet_App
+```
 
-Win/loss tracking and payout calculations
+2. Install dependencies (for Blackjack):
+```bash
+cd Blackjack
+pip install -r requirements.txt
+```
 
-Game loop with replay options
+### Running the Games
 
-Clear console visuals for game feedback
+**Blackjack:**
+```bash
+cd Blackjack
+python main.py
+```
 
-Easy to extend with new games or rules
+**Rock-Paper-Scissors:**
+```bash
+cd Rock_Paper_Scissors
+python rock_paper_scissors.py
+```
 
-🚀 Future Enhancements
-GUI with tkinter or pygame
+**Mastermind:**
+```bash
+cd Mastermind
+python Game.py
+```
 
-User profiles and persistent stats
+## 🎯 Features
 
-AI opponents
+- **Clean CLI Interface:** Intuitive text-based gameplay
+- **Modular Design:** Easy to extend and maintain
+- **Game Statistics:** Track wins, losses, and performance
+- **Reusable Components:** Object-oriented architecture for code reuse
+
+## 🔮 Future Enhancements
+
+- [ ] Complete Blackjack betting system and game loop
+- [ ] Add GUI using `tkinter` or `pygame`
+- [ ] Persistent user profiles and statistics
+- [ ] Additional games (Poker, Slots, Roulette)
+- [ ] Multiplayer support
+- [ ] Achievement system
+- [ ] Save/load game state
+
+## 📝 License
+
+This is a personal project for educational purposes.
+
+## 👤 Author
+
+**Alondra Soto**
+- GitHub: [@HaloV01d](https://github.com/HaloV01d)
+
+---
+
+*Built with ❤️ and Python*
